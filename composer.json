@@ -1,7 +1,7 @@
 {
 	"name": "mvccore/ext-router-module-localization",
 	"type": "library",
-	"description": "MvcCore - Extension - Router - Media & Localization - extension to manage website media version (full/tablet/mobile) for different templates/css/js files rendering and to manage your website language (or language and locale) version optionaly contained in url address in the beinning.",
+	"description": "MvcCore - Extension - Router - Modules With Localization - extension to manage multiple websites in a single project and to manage website localizations (language or language and locale), optionaly contained in a domain or in URL address in the beginning.",
 	"keywords": [
 		"mvc",
 		"mvccore",
