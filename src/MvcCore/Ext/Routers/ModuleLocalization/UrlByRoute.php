@@ -16,13 +16,13 @@ namespace MvcCore\Ext\Routers\ModuleLocalization;
 trait UrlByRoute
 {
 	/**
-	 * Complete non-absolute, non-localized url by route instance reverse info.
+	 * Complete non-absolute, non-localized URL by route instance reverse info.
 	 * If there is key `media_version` in `$params`, unset this param before
-	 * route url completing and choose by this param url prefix to prepend 
-	 * completed url string.
+	 * route URL completing and choose by this param URL prefix to prepend 
+	 * completed URL string.
 	 * If there is key `localization` in `$params`, unset this param before
-	 * route url completing and place this param as url prefix to prepend 
-	 * completed url string and to prepend media site version prefix.
+	 * route URL completing and place this param as URL prefix to prepend 
+	 * completed URL string and to prepend media site version prefix.
 	 * Example:
 	 *	Input (`\MvcCore\Route::$reverse`):
 	 *		`"/products-list/<name>/<color>"`
@@ -65,9 +65,9 @@ trait UrlByRoute
 			);
 		
 
-		// get domain with base path url section, 
-		// path with query string url section 
-		// and system params for url prefixes
+		// get domain with base path URL section, 
+		// path with query string URL section 
+		// and system params for URL prefixes
 		list($urlBaseSection, $urlPathWithQuerySection, $systemParams) = $this->urlByRouteSections(
 			$route, $params, $urlParamRouteName
 		);
@@ -76,7 +76,7 @@ trait UrlByRoute
 			$systemParams = array_diff_key($systemParams, $domainParamsDefault);
 
 		// remove localization prefix for non localized routes or
-		// remove localization prefix if url targets top homepage `/` on default language version
+		// remove localization prefix if URL targets top homepage `/` on default language version
 		$localizedRoute = $route instanceof \MvcCore\Ext\Routers\Localizations\Route;
 		$localizationParamName = static::URL_PARAM_LOCALIZATION;
 		$urlPathWithQueryIsHome = NULL;
@@ -95,7 +95,7 @@ trait UrlByRoute
 			}
 		}
 		
-		// create prefixed url
+		// create prefixed URL
 		return $this->urlByRoutePrefixSystemParams(
 			$domainUrlBaseSection ?: $urlBaseSection, 
 			$urlPathWithQuerySection, 
