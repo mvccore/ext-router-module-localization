@@ -15,6 +15,24 @@ namespace MvcCore\Ext\Routers\ModuleLocalization;
 
 trait RewriteRoutingChecks
 {
+	/**
+	 * Return `TRUE` if there is possible (or not) by additional info array 
+	 * records to route incoming request by given route as first argument. 
+	 * Check, if route object has defined any http method and if the request has 
+	 * the same method or not, check if route has defined any allowed module and 
+	 * if routed module name is presented in allowed module names array and 
+	 * check if route object is localized route instance and if there is also 
+	 * any localization found in request. If there is a conflict, return 
+	 * `FALSE`, if there is everything OK, return `TRUE`.
+	 * @param \MvcCore\IRoute $route 
+	 * @param array $additionalInfo 
+	 *				Array with request method as string, localization found in 
+	 *				request as bool, route is localized as bool and boolean 
+	 *				about not skip localized routes matching when request has no 
+	 *				localization in path and other conditions described inside 
+	 *				this function.
+	 * @return bool
+	 */
 	protected function rewriteRoutingCheckRoute (\MvcCore\IRoute & $route, array $additionalInfo) {
 		list ($requestMethod, $localizationInRequest, $routeIsLocalized, $localizationRoutesSkipping) = $additionalInfo;
 
