@@ -59,7 +59,7 @@ Router is composed from traits in extensions named above.
 
 ## 4. Usage
 
-### 4.1. Usage - `Bootstrap` Initialization
+### Usage - `Bootstrap` Initialization
 
 Add this to `/App/Bootstrap.php` or to **very application beginning**, 
 before application routing or any other extension configuration
