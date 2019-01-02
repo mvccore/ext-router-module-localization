@@ -13,13 +13,8 @@ This router is the way, how to route your requests in domain level with localiza
 2. [Features](#user-content-2-features)  
 3. [How It Works](#user-content-3-how-it-works)  
 4. [Usage](#user-content-4-usage)  
-    4.1. [Usage - `Bootstrap` Initialization](#user-content-41-usage---bootstrap-initialization)  
-	4.2. [Usage - Targeting Custom Application Part](#user-content-42-usage---targeting-custom-application-part)  
-    4.3. [Usage - Creating Module Domain Route](#user-content-43-usage---creating-module-domain-route)  
-    4.4. [Usage - Domain Routes And Standard Routes Definition](#user-content-44-usage---domain-routes-and-standard-routes-definition)  
 
-
-## Installation
+## 1. Installation
 ```shell
 composer require mvccore/ext-router-module-localization
 ```
