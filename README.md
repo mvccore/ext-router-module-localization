@@ -58,6 +58,8 @@ Extension works in the same way as extensions bellow together:
 - [How It Works - `mvccore/ext-router-module`](https://github.com/mvccore/ext-router-module#user-content-3-how-it-works)
 - [How It Works - `mvccore/ext-router-localization`](https://github.com/mvccore/ext-router-localization#user-content-3-how-it-works)
 
+Router is composed from traits in extensions named above.
+
 [go to top](#user-content-outline)
 
 ## 4. Usage
