@@ -42,7 +42,7 @@ new \MvcCore\Ext\Routers\Modules\Route([
     "constraints"          => ["localization" => "-a-zA-Z"],
 ]);
 ```
-If there is not contained param `<localization>` in module domain pattern, localization is automatically contained in URL address beginning like this:
+If there is not contained param `<localization>` in matched module domain route pattern and matched route (or route to generate URL) is defined as localized route, localization param has to be contained (or is automaticly inserted) in URL address beginning like this:
 - `http://example.com/anything`
 - `http://example.com/en/anything`
 - `http://example.com/en-US/anything`
@@ -53,12 +53,31 @@ How precisely is conained in URL address depends on advanced router configuratio
 
 ## 3. How It Works
 
-
+Extension works in the same way as extensions bellow together:
+- [How It Works - `mvccore/ext-router-module`](https://github.com/mvccore/ext-router-module#user-content-3-how-it-works)
+- [How It Works - `mvccore/ext-router-localization`](https://github.com/mvccore/ext-router-localization#user-content-3-how-it-works)
 
 [go to top](#user-content-outline)
 
 ## 4. Usage
 
+### 4.1. Usage - `Bootstrap` Initialization
 
+Add this to `/App/Bootstrap.php` or to **very application beginning**, 
+before application routing or any other extension configuration
+using router for any purposes:
+
+```php
+$app = & \MvcCore\Application::GetInstance();
+$app->SetRouterClass('\MvcCore\Ext\Routers\ModuleLocalization');
+...
+// to get router instance for next configuration:
+/** @var $router \MvcCore\Ext\Routers\ModuleLocalization */
+$router = & \MvcCore\Router::GetInstance();
+```
+
+All other specific usage and advanced configuration is the same as extensions bellow together:
+- [More usage and configuration for `mvccore/ext-router-module`](https://github.com/mvccore/ext-router-module#user-content-42-usage---targeting-custom-application-part)
+- [More usage and configuration for `mvccore/ext-router-localization`](https://github.com/mvccore/ext-router-localization#user-content-42-usage---default-localization)
 
 [go to top](#user-content-outline)
