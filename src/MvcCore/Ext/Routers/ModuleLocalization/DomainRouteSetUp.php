@@ -29,6 +29,7 @@ trait DomainRouteSetUp
 	 * @return void
 	 */
 	protected function domainRoutingSetUpRouterByDomainRoute () {
+		/** @var $this \MvcCore\Ext\Routers\ModuleLocalization */
 		// if domain route contains any allowed localizations configuration,
 		// set up router by this configuration
 		$allowedLocalizations = $this->currentDomainRoute->GetAdvancedConfigProperty(
