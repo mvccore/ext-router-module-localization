@@ -13,6 +13,9 @@
 
 namespace MvcCore\Ext\Routers\ModuleLocalization;
 
+/**
+ * @mixin \MvcCore\Ext\Routers\ModuleLocalization
+ */
 trait Redirect {
 
 	/**
@@ -22,7 +25,6 @@ trait Redirect {
 	 * @return void
 	 */
 	protected function redirectCorrectDomainSystemParams (& $domainParams) {
-		/** @var $this \MvcCore\Ext\Routers\ModuleLocalization */
 		$localizationParamName = static::URL_PARAM_LOCALIZATION;
 		if (isset($domainParams[$localizationParamName])) {
 			$domainParams[$localizationParamName] = $this->redirectLocalizationGetUrlValueAndUnsetGet(

@@ -13,6 +13,9 @@
 
 namespace MvcCore\Ext\Routers\ModuleLocalization;
 
+/**
+ * @mixin \MvcCore\Ext\Routers\ModuleLocalization
+ */
 trait RewriteRoutingChecks {
 
 	/**
@@ -34,7 +37,6 @@ trait RewriteRoutingChecks {
 	 * @return bool
 	 */
 	protected function rewriteRoutingCheckRoute (\MvcCore\IRoute $route, array $additionalInfo) {
-		/** @var $this \MvcCore\Ext\Routers\ModuleLocalization */
 		list ($requestMethod, $localizationInRequest, $routeIsLocalized, $localizationRoutesSkipping) = $additionalInfo;
 
 		$routeMethod = $route->GetMethod();
