@@ -65,6 +65,6 @@ implements	\MvcCore\Ext\Routers\IModule,
 	 * Comparison by PHP function version_compare();
 	 * @see http://php.net/manual/en/function.version-compare.php
 	 */
-	const VERSION = '5.0.3';
+	const VERSION = '5.2.0';
 
 }
